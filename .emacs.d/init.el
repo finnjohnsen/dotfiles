@@ -13,6 +13,7 @@
 (when (not (package-installed-p 'yaml-mode)) (package-install 'yaml-mode))
 (when (not (package-installed-p 'clojure-mode)) (package-install 'clojure-mode))
 (when (not (package-installed-p 'org)) (package-install 'org))
+(when (not (package-installed-p 'simple-httpd)) (package-install 'simple-httpd))
 
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))

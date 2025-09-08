@@ -7,6 +7,7 @@ export VISUAL="emacs"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/miniforge/bin
+PATH=$PATH:$HOME/.local/bin
 
 if [[ $(uname) == "Darwin" ]]; then
    export PATH=$PATH:/opt/homebrew/bin  
@@ -18,7 +19,7 @@ ZSH_THEME="bira"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.local/bin/env
-
+source $HOME/.bash_completions/ollmcp.sh
 alias zshconfig="emacs ~/.zshrc &"
 alias ohmyzsh="emacs ~/.oh-my-zsh &"
 alias alaconfig="emacs ~/.config/alacritty/alacritty.yml &"

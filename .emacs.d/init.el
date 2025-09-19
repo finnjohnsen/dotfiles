@@ -84,24 +84,27 @@
     (message "Microsoft Windows")))
  ((string-equal system-type "darwin") ; Mac OS X
   (progn
+    (xclip-mode 1)
     (setq mac-option-key-is-meta nil)
     (setq mac-command-key-is-meta t)
     (setq mac-command-modifier 'meta)
     (setq mac-option-modifier nil)
     (message "Mac OS X")))
-
+ ((string-match-p "WSL2\\'" operating-system-release)
+  (progn
+    (xclip-mode 0) ; Gets rid of error because of missing powershell. 
+    (message "WSL2")))
  ((string-equal system-type "gnu/linux") ; linux
   (progn
+    (xclip-mode 1)
     (message "Linux"))))
-
-(xclip-mode 1)
 
 (use-package nordic-night-theme
   :ensure t
   :config
-  ;(load-theme 'nordic-midnight t)
   (load-theme 'nordic-night t))
 
 (mapc 'load (file-expand-wildcards "~/.emacs.d/package-configs/*.el"))
+
 
 

@@ -76,7 +76,7 @@ style = "Light"
 [scrolling]
 history = 0
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux new-session -A -s main"]
 program = "/bin/zsh"
 

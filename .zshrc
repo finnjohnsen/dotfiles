@@ -18,8 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="bira"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-source $HOME/.local/bin/env
-source $HOME/.bash_completions/ollmcp.sh
+# source $HOME/.local/bin/env
 alias zshconfig="emacs ~/.zshrc &"
 alias ohmyzsh="emacs ~/.oh-my-zsh &"
 alias alaconfig="emacs ~/.config/alacritty/alacritty.yml &"

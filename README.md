@@ -1,17 +1,12 @@
 My dotfiles
 
+This setup works in Ubuntu, Windows and MacOS. 
+
+Everywhere I can I install the Nord theme, and JetBrainsMono Nerd Font.
 
 # Run
 > stow .
 
 
-# Note
-
-## Alacritty
-Alacritty uses JetBrainsMono Nerd font. Install this first is preferred.
-
-## Tmux
-TMux needs some attention first also.
-
-1. git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tmp
-2. reload all: b-b I
+# Alacritty and Tmux
+this setup is dying as Im moving to kitty

@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+import requests
+url="https://visits.evofitness.no/api/v1/locations/0b3390cc-a035-4262-a188-12b2a829d455/current"
+
+RED = "\033[31m"
+GREEN = "\033[32m"
+BLUE = "\033[34m"
+BOLD = '\033[1m'
+
+RESET = "\033[0m"
+
+response = requests.get(url)
+json = response.json()
+
+print(f"På {json['name']} trener {BOLD}{json['current']}{RESET}, maksimalt {json['max_capacity']}")

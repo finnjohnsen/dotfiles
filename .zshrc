@@ -22,5 +22,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="emacs ~/.zshrc &"
 alias ohmyzsh="emacs ~/.oh-my-zsh &"
 alias alaconfig="emacs ~/.config/alacritty/alacritty.yml &"
+alias icat="kitty +kitten icat"
 
 . "$HOME/.local/bin/env"

@@ -13,4 +13,4 @@ RESET = "\033[0m"
 response = requests.get(url)
 json = response.json()
 
-print(f"På {json['name']} trener {BOLD}{json['current']}{RESET}, maksimalt {json['max_capacity']}")
+print(f"{BOLD}{json['current']}{RESET} trener nå på {json['name']} (maksimalt {json['max_capacity']})")

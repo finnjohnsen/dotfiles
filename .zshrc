@@ -3,11 +3,10 @@ alias magit="emacs -nw --magit"
 export EDITOR="emacs -nw"
 export VISUAL="emacs"
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/miniforge/bin
 PATH=$PATH:$HOME/.local/bin
+export PATH=~/.opencode/bin:$PATH
 
 if [[ $(uname) == "Darwin" ]]; then
    export PATH=$PATH:/opt/homebrew/bin  
@@ -25,3 +24,5 @@ alias alaconfig="emacs ~/.config/alacritty/alacritty.yml &"
 alias icat="kitty +kitten icat"
 
 . "$HOME/.local/bin/env"
+
+

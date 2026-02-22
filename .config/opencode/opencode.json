@@ -1,0 +1,43 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "model": "ollama/gpt-oss:20b",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://twister:11434/v1"
+      },
+      "models": {
+          "qwen3-coder:30b": {
+            "name": "qwen3-coder:30b"
+        },
+          "gpt-oss:20b": {
+            "name": "gpt-oss:20b"
+        }
+      }
+    }
+  },
+  "tools": {
+    "write": false,
+    "bash": false
+  },
+  "agent": {
+    "plan": {
+      "tools": {
+        "write": false,
+        "bash": false
+      }
+    },
+    "build": {
+      "permission": {
+        "bash": {
+          "git *": "deny"
+        }
+      }
+    }
+  },
+  "permission": {
+    "edit": "ask"
+  }
+}

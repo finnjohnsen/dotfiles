@@ -9,6 +9,7 @@
   (package-refresh-contents))
 
 (when (not (package-installed-p 'xclip)) (package-install 'xclip))
+(when (not (package-installed-p 'clipetty)) (package-install 'clipetty))
 (when (not (package-installed-p 'magit)) (package-install 'magit))
 (when (not (package-installed-p 'yaml-mode)) (package-install 'yaml-mode))
 (when (not (package-installed-p 'clojure-mode)) (package-install 'clojure-mode))
@@ -56,9 +57,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("b23f3067e27a9940a563f1fb3bf455aabd0450cb02c3fa4ad43f75a583311216" default))
+   '("b23f3067e27a9940a563f1fb3bf455aabd0450cb02c3fa4ad43f75a583311216"
+     default))
  '(package-selected-packages
-   '(nordic-night-theme xclip zig-mode clojure-mode cljsbuild-mode yaml-mode magit)))
+   '(clipetty cljsbuild-mode clojure-mode magit nordic-night-theme xclip
+              yaml-mode zig-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -71,13 +74,9 @@
 ; Keybinds
 
 (global-set-key (kbd "C-c /") 'comment-region)
-
 (global-set-key (kbd "C-c ?") 'uncomment-region)
 
-
-
 ;; check OS type
-
 (cond
  ((string-equal system-type "windows-nt") ; Microsoft Windows
   (progn

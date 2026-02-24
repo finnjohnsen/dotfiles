@@ -57,11 +57,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("b23f3067e27a9940a563f1fb3bf455aabd0450cb02c3fa4ad43f75a583311216"
-     default))
+   '("b23f3067e27a9940a563f1fb3bf455aabd0450cb02c3fa4ad43f75a583311216" default))
  '(package-selected-packages
-   '(clipetty cljsbuild-mode clojure-mode magit nordic-night-theme xclip
-              yaml-mode zig-mode)))
+   '(clipetty cljsbuild-mode clojure-mode magit nordic-night-theme xclip yaml-mode zig-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

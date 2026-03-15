@@ -23,4 +23,8 @@ alias ohmyzsh="emacs ~/.oh-my-zsh &"
 alias alaconfig="emacs ~/.config/alacritty/alacritty.yml &"
 alias icat="kitty +kitten icat"
 
+<<<<<<< HEAD
 . "$HOME/.local/bin/env"
+=======
+
+>>>>>>> 8146a4b (fix stuff)

@@ -16,7 +16,7 @@
     }
   },
   "tools": {
-    "write": true
+      "write": true,
     "bash": true
   },
   "agent": {

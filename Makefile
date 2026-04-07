@@ -1,6 +1,10 @@
 
 update:
 	stow .
+	if [ -d "/mnt/c/Users/finn" ]; then make update-wsl; fi
+
+update-wsl:
+	cp .config/opencode/opencode.json /mnt/c/Users/finn/.config/opencode/
 
 purge:
 	stow -D .

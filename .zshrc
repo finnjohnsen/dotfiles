@@ -6,6 +6,8 @@ export VISUAL="emacs"
 PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/miniforge/bin
 PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.asdf/shims
+
 export PATH=~/.opencode/bin:$PATH
 if [[ $(uname) == "Darwin" ]]; then
    export PATH=$PATH:/opt/homebrew/bin

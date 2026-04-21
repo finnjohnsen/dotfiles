@@ -1,26 +1,15 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent_servers": {
     "opencode": {
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "auto_install_extensions": {
     "html": true,
+    "plantuml": true,
+    "opencode": true,
   },
   "agent": {
-    "default_model": {
-      "provider": "ollama",
-      "model": "gemma4:31b",
-      "enable_thinking": true,
-    },
     "default_profile": "ask",
     "favorite_models": [],
     "model_parameters": [],
@@ -35,27 +24,6 @@
   "language_models": {
     "ollama": {
       "auto_discover": false,
-    },
-    "openai_compatible": {
-      "lmstudio-gemma4-munkepi": {
-        "api_url": "http://munkepi:4000/v1",
-        "available_models": [
-          {
-            "name": "google/gemma-4-e2b",
-            "display_name": "Gemma4 e2b (Rasperry Pi 5)",
-            "max_tokens": 200000,
-            "max_output_tokens": 20000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true,
-            },
-          },
-        ],
-      },
     },
   },
 }

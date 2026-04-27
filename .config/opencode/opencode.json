@@ -1,6 +1,6 @@
 {
     "$schema": "https://opencode.ai/config.json",
-    "model": "ollama/gemma4:31b",
+    "model": "qwen3.6:27B",
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
@@ -11,7 +11,17 @@
       "models": {
           "gemma4:31b": {
             "name": "gemma4:31b"
-        }
+          },
+          "qwen3.6:27B": {
+              "name": "qwen3.6:27B"
+          },
+          "qwen3.6:35b-a3b": {
+            "name": "qwen3.6:35b-a3b"
+          },
+          "JetBrains/Mellum-4b-sft-all:latest": {
+            "name": "JetBrains/Mellum-4b-sft-all:latest"
+          }
+
       }
     }
   },

@@ -1,7 +1,19 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "model": "qwen3.6:27B",
-  "provider": {
+    "provider": {
+    "vllm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "vLLM",
+      "options": {
+        "baseURL": "http://twister:8000/v1"
+      },
+      "models": {
+          "/models/QuantTrio/Qwen3.6-27B-AWQ": {
+            "name": "Qwen3.6-27B-AWQ"
+          },
+      }
+    },
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",
@@ -27,7 +39,7 @@
   },
   "tools": {
       "write": true,
-    "bash": true
+      "bash": true
   },
   "agent": {
     "plan": {
@@ -42,6 +54,7 @@
       }
     }
   },
+  "plugin": ["opencode-token-monitor@latest"],
   "permission": {
     "edit": "ask"
   }

@@ -54,7 +54,7 @@
       }
     }
   },
-  "plugin": ["opencode-token-monitor@latest"],
+  "plugin": [],
   "permission": {
     "edit": "ask"
   }

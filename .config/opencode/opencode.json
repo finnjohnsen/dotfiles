@@ -25,7 +25,7 @@
                     "name": "Qwen3.6-27B-Q4_K_M.gguf"
                 },
             }
-        }
+        },
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",

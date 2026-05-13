@@ -7,6 +7,7 @@ PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/miniforge/bin
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:$HOME/.asdf/shims
+export PATH="/var/lib/flatpak/exports/bin:$PATH"
 
 export PATH=~/.opencode/bin:$PATH
 if [[ $(uname) == "Darwin" ]]; then
@@ -23,8 +24,11 @@ alias zshconfig="emacs ~/.zshrc &"
 alias ohmyzsh="emacs ~/.oh-my-zsh &"
 alias alaconfig="emacs ~/.config/alacritty/alacritty.yml &"
 alias icat="kitty +kitten icat"
+<<<<<<< HEAD
 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+=======
+>>>>>>> 8702c72 (flatpak)

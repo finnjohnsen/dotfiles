@@ -61,7 +61,11 @@
       "type": "local",
       "command": ["/home/finn/.local/bin/uv", "--directory", "/home/finn/src/blender_mcp/mcp", "run", "blender-mcp"],
       "enabled": true
-    }
+    },
+    "kirenn": {
+      "type": "remote",
+      "url": "http://twister:7778/api/mcp"
+    },
   },
   "agent": {
     "plan": {

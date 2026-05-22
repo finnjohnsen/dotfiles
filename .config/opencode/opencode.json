@@ -26,6 +26,18 @@
                 },
             }
         },
+        "dflash": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "DFlash+TCQ",
+            "options": {
+                "baseURL": "http://twister:8002/v1"
+            },
+            "models": {
+                "Qwen3.6-27B-UD-Q6_K_XL.gguf": {
+                    "name": "qwen3.6:27B DFlash"
+                }
+            }
+        },
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",
@@ -54,21 +66,30 @@
       "bash": true,
       "grep": true,
       "websearch": true,
-      "webfetch":true,
+      "webfetch": false,
   },
     "mcp": {
      	"blender": {
-	    "command": "uv",
-            "args": [
+            "type": "local",
+            "command": [
+                "uv",
 		"--directory",
 		"/mnt/2tb/opt/blender_mcp/mcp",
 		"run",
 		"blender-mcp"
-	    ]
+	    ],
+            "enabled": true,
 	},
         "kirenn": {
             "type": "remote",
             "url": "http://twister:7778/api/mcp"
+        },
+        "searxng": {
+            "type": "local",
+            "command": ["npx", "mcp-searxng"],
+            "environment": {
+                "SEARXNG_URL": "http://twister:8501"
+            }
         },
   },
   "agent": {

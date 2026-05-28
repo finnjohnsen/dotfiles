@@ -25,16 +25,10 @@
     "mcp": {
      	"blender": {
             "type": "local",
-            "command": [
-                "uv",
-		"--directory",
-		"/mnt/2tb/opt/blender_mcp/mcp",
-		"run",
-		"blender-mcp"
-	    ],
+            "command": ["blender-mcp"],
             "enabled": true,
             "environment": {
-                "DISABLE_TELEMETRY": "true",
+                "BLENDER_MCP_HOST": "127.0.0.1",
             }
 	},
         "kirenn": {
@@ -53,10 +47,7 @@
             "type": "local",
             "command": [
                 "npx",
-                "@playwright/mcp@latest",
-                "--executable-path",
-                "/home/finn/.cache/ms-playwright/chromium-1223/chrome-linux64/chrome",
-                "--headless"
+                "@playwright/mcp@latest"
             ],
             "enabled": true
         },

@@ -11,9 +11,25 @@
             "models": {
                 "Qwen3.6-27B-UD-Q6_K_XL.gguf": {
                     "name": "Qwen3.6 27B TurboQuant"
-                },
+                }
             }
         },
+        "llamacpp-gemma4": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Gemma 4 VLM (llama.cpp)",
+            "options": {
+                "baseURL": "http://twister:8002/v1"
+            },
+            "models": {
+                "gemma-4-E4B-it-Q4_K_M.gguf": {
+                    "name": "Gemma 4 VLM E4B Q4_K_M",
+                    "limit": {
+                        "context": 256000,
+                        "output": 32768
+                    }
+                }
+            }
+        }
   },
   "tools": {
       "write": true,

@@ -10,7 +10,12 @@
             },
             "models": {
                 "Qwen3.6-27B-UD-Q6_K_XL.gguf": {
-                    "name": "Qwen3.6 27B TurboQuant"
+                    "name": "Qwen3.6 27B TurboQuant",
+                    "modalities": {
+                        "input": ["text", "image"],
+                        "output": ["text"]
+                    },
+                    "attachment": true
                 }
             }
         },

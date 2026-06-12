@@ -49,12 +49,16 @@
             "command": ["blender-mcp"],
             "enabled": true,
             "environment": {
-                "BLENDER_MCP_HOST": "127.0.0.1",
+                "BLENDER_MCP_HOST": "localhost",
             }
 	},
         "kirenn": {
             "type": "remote",
             "url": "http://twister:7778/api/mcp"
+        },
+        "UnrealEngine": {
+            "type": "remote",
+            "url": "http://localhost:9990/mcp"
         },
         "searxng": {
             "type": "local",

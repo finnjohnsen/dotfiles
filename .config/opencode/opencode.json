@@ -41,7 +41,7 @@
       "bash": true,
       "grep": true,
       "websearch": true,
-      "webfetch": false,
+      "webfetch": true,
   },
     "mcp": {
      	"blender": {
@@ -63,19 +63,6 @@
                 "SEARXNG_URL": "http://twister:8501"
             }
         },
-
-        "playwright": {
-            "type": "local",
-            "command": [
-                "npx",
-                "@playwright/mcp@latest"
-            ],
-            "enabled": true
-        },
-
-
-
-        
   },
   "agent": {
     "plan": {

@@ -53,6 +53,7 @@
             }
 	},
         "kirenn": {
+            "enabled":false,
             "type": "remote",
             "url": "http://twister:7778/api/mcp"
         },
@@ -61,12 +62,27 @@
             "url": "http://localhost:9990/mcp"
         },
         "searxng": {
+            "enabled": false,
             "type": "local",
             "command": ["npx", "mcp-searxng"],
             "environment": {
                 "SEARXNG_URL": "http://twister:8501"
             }
         },
+        "z.ai-web-search-prime": {
+            "type": "remote",
+            "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
+            "headers": {
+                "Authorization": "060200bfac7441a18237c391cbbe4641.zKmwDM6EZooQMO9m"
+            }
+        },
+        "z.ai-web-reader": {
+            "type": "remote",
+            "url": "https://api.z.ai/api/mcp/web_reader/mcp",
+            "headers": {
+                "Authorization": "060200bfac7441a18237c391cbbe4641.zKmwDM6EZooQMO9m"
+            }
+        }
   },
   "agent": {
     "plan": {

@@ -59,7 +59,12 @@
         },
         "UnrealEngine": {
             "type": "remote",
-            "url": "http://localhost:9990/mcp"
+            "url": "http://localhost:9999/mcp"
+        },
+        "Rider": {
+            "type": "remote",
+            "url": "http://127.0.0.1:64342/stream",
+            "enabled": true
         },
         "searxng": {
             "enabled": false,

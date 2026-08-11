@@ -44,11 +44,35 @@
             "models": {
                 "muse-glimmer-30b": {
                     "name": "Muse Glimmer 30b (Meta)",
+                    "limit": {
+                        "context": 131072,
+                        "output": 32768
+                    },
                     "modalities": {
                         "input": ["text", "image"],
                         "output": ["text"]
                     },
-                    "attachment": true
+                    "attachment": true,
+                    "variants": {
+                        "xhigh": {
+                            "name": "Muse Glimmer (xhigh)",
+                            "options": {
+                                "chat_template_kwargs": {"reasoning_strength": "xhigh"}
+                            }
+                        },
+                        "high": {
+                            "name": "Muse Glimmer (high)",
+                            "options": {
+                                "chat_template_kwargs": {"reasoning_strength": "high"}
+                            }
+                        },
+                        "low": {
+                            "name": "Muse Glimmer (low)",
+                            "options": {
+                                "chat_template_kwargs": {"reasoning_strength": "low"}
+                            }
+                        }
+                    }
                 }
             }
         }

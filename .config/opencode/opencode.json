@@ -15,7 +15,15 @@
                         "input": ["text", "image"],
                         "output": ["text"]
                     },
-                    "attachment": true
+                    "attachment": true,
+                    "variants": {
+                        "thinking": {
+                            "chat_template_kwargs": {"enable_thinking": true}
+                        },
+                        "fast": {
+                            "chat_template_kwargs": {"enable_thinking": false}
+                        }
+                    }
                 }
             }
         },
@@ -55,22 +63,13 @@
                     "attachment": true,
                     "variants": {
                         "xhigh": {
-                            "name": "Muse Glimmer (xhigh)",
-                            "options": {
-                                "chat_template_kwargs": {"reasoning_strength": "xhigh"}
-                            }
+                            "chat_template_kwargs": {"reasoning_strength": "xhigh"}
                         },
                         "high": {
-                            "name": "Muse Glimmer (high)",
-                            "options": {
-                                "chat_template_kwargs": {"reasoning_strength": "high"}
-                            }
+                            "chat_template_kwargs": {"reasoning_strength": "high"}
                         },
                         "low": {
-                            "name": "Muse Glimmer (low)",
-                            "options": {
-                                "chat_template_kwargs": {"reasoning_strength": "low"}
-                            }
+                            "chat_template_kwargs": {"reasoning_strength": "low"}
                         }
                     }
                 }

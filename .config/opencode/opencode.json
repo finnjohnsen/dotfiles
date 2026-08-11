@@ -34,6 +34,23 @@
                     }
                 }
             }
+        },
+        "muse-glimmer": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Muse Glimmer 30b (Meta)",
+            "options": {
+                "baseURL": "http://twister:8005/v1"
+            },
+            "models": {
+                "muse-glimmer-30b": {
+                    "name": "Muse Glimmer 30b (Meta)",
+                    "modalities": {
+                        "input": ["text", "image"],
+                        "output": ["text"]
+                    },
+                    "attachment": true
+                }
+            }
         }
   },
   "tools": {

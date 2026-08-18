@@ -1,0 +1,28 @@
+ui-onboarding:
+  welcomeNoticeVersion: 2026-08-13.1
+
+llm-pi-ai:
+  providers:
+    twister:
+      apiKeyEnv: GATEWAY_API_KEY
+      api: openai-completions
+      baseURL: http://twister:8007/v1
+      models:
+        - id: /models/unsloth/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q6_K.gguf
+          input:
+            - text
+            - image
+          name: Qwen 3.8 27b
+    z-ai:
+      displayName: z.ai
+      apiKeyEnv: Z_AI_API_KEY
+      api: openai-completions
+      baseURL: https://api.z.ai/api/paas/v4
+      models:
+        - id: glm-4.5-air
+        - id: glm-5-turbo
+        - id: glm-5.2
+
+agent-default-model:
+  provider: z-ai
+  model: glm-5.2

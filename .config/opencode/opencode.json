@@ -2,15 +2,15 @@
     "$schema": "https://opencode.ai/config.json",
     "model": "Qwen3.6-27B-UD-Q6_K_XL.gguf",
     "provider": {
-        "llamacpp": {
+        "qwen38": {
            "npm": "@ai-sdk/openai-compatible",
             "name": "llamacpp",
             "options": {
-                "baseURL": "http://twister:8001/v1"
+                "baseURL": "http://twister:8007/v1"
             },
             "models": {
-                "Qwen3.6-27B-UD-Q6_K_XL.gguf": {
-                    "name": "Qwen3.6 27B TurboQuant",
+                "/models/unsloth/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q6_K.gguf": {
+                    "name": "Qwen3.8 27B GGUF Q6_K",
                     "modalities": {
                         "input": ["text", "image"],
                         "output": ["text"]
@@ -18,7 +18,13 @@
                     "attachment": true,
                     "variants": {
                         "thinking": {
-                            "chat_template_kwargs": {"enable_thinking": true}
+                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "xhigh"}
+                        },
+                        "medium": {
+                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "medium"}
+                        },
+                        "low": {
+                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "low"}
                         },
                         "fast": {
                             "chat_template_kwargs": {"enable_thinking": false}

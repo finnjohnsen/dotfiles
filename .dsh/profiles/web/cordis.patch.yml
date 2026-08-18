@@ -1,43 +1,27 @@
-# Your patch layer for this dsh profile, applied after every bundle layer:
-# a top-level YAML array of loader patch entries (id-targeted config
-# overrides, disables, and insert lists; `!!js` expressions allowed).
-
-# ── remote MCP servers (z.ai) ───────────────────────────────────────────────
-# One dsh-mcp-client instance per server. The client publishes no service of
-# its own, so the rows sit loose (no realm); tools register GLOBALLY on the
-# host tools registry and are visible to every session of this profile.
-# Tool names: mcp__<serverName>__<rawName>. serverName is [A-Za-z0-9_-]{1,32},
-# hence the dots in "z.ai-..." became hyphens. The Authorization value is the
-# raw z.ai API key (no "Bearer" prefix), pulled from the same Z_AI_API_KEY
-# env var the z-ai LLM provider uses in settings.yaml — keep it out of this file.
+# Profile-local patch — applied after the dsh-base + dsh-web-app bundle patches.
+# Adds z.ai MCP servers (web search + web reader) over streamable-http. Each
+# server's tools surface to the model as mcp__<serverName>__<rawName>.
+#
+# The Authorization header is the RAW z.ai API key (no "Bearer" prefix),
+# resolved from process.env.Z_AI_API_KEY. MCP `!!js process.env.*` expressions
+# read ONLY process.env — not .credentials.yaml — so the key must also be
+# present in ~/.dsh/.env (see .env.example) for these to authenticate.
+# HMR is disabled in the web profile, so restart `dsh web` to load this patch.
 - insert:
-    - id: mcp-z-ai-web-search-prime
+    - id: mcp-zai-web-search
       name: '@deepseek-ai/dsh-mcp-client'
       config:
-        serverName: z-ai-web-search-prime
+        serverName: zai-web-search
         transport: streamable-http
         url: https://api.z.ai/api/mcp/web_search_prime/mcp
         headers:
           Authorization: !!js process.env.Z_AI_API_KEY
 
-    - id: mcp-z-ai-web-reader
+    - id: mcp-zai-web-reader
       name: '@deepseek-ai/dsh-mcp-client'
       config:
-        serverName: z-ai-web-reader
+        serverName: zai-web-reader
         transport: streamable-http
         url: https://api.z.ai/api/mcp/web_reader/mcp
         headers:
           Authorization: !!js process.env.Z_AI_API_KEY
-
-# ── disable unused DeepSeek-backed defaults ─────────────────────────────────
-# The web profile ships a DeepSeek LLM provider adapter and a DeepSeek web-search
-# backend. This setup uses z-ai (glm-5.2) for chat and the z.ai MCPs above for
-# web access, so both DeepSeek entries are disabled here. A patch entry with
-# `id: <target>` + `disabled: true` drops the entry's fiber at mount — its tools
-# and services never register. The entry still appears in --dump-config marked
-# `disabled: true`, but `assertEntriesActivated` skips it (disabled entries are
-# not required to load). HMR applies this live (no restart).
-- id: llm-deepseek
-  disabled: true
-- id: web-search-deepseek
-  disabled: true

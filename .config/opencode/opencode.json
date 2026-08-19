@@ -91,18 +91,12 @@
   },
     "mcp": {
  	"blender": {
-	    "command": "uv",
-            "enabled": false,
-	    "args": [
-		"--directory",
-		"$HOME/src/blender_mcp/mcp",
-		"run",
-		"blender-mcp",
-                "--transport",
-                "http",
-                "--port",
-                "9998"
-		]
+            "enabled": true,
+	    "type":"local",
+            "environment": {
+                "BLENDER_MCP_PORT": "9876"
+            },
+	    "command": [ "uv", "--directory", "C:/Users/finn/src/blender_mcp/mcp", "run", "blender-mcp", "--transport", "stdio"]
 	},
         "kirenn": {
             "enabled":false,

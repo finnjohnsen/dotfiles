@@ -5,6 +5,7 @@ update:
 
 update-wsl:
 	cp .config/opencode/opencode.json /mnt/c/Users/finn/.config/opencode/
+	cp -r .dsh /mnt/c/Users/finn/.dsh
 #	cp -rf .emacs.d/* /mnt/c/Users/finn/AppData/Roaming/.emacs.d/
 
 purge:

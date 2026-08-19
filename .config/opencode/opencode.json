@@ -90,13 +90,15 @@
       "webfetch": true,
   },
     "mcp": {
-     	"blender": {
-            "type": "local",
-            "command": ["blender-mcp"],
-            "enabled": true,
-            "environment": {
-                "BLENDER_MCP_HOST": "localhost",
-            }
+ 	"blender": {
+	    "command": "uv",
+            "enabled": false,
+	    "args": [
+		"--directory",
+		"$HOME/src/blender_mcp/mcp",
+		"run",
+		"blender-mcp"
+		]
 	},
         "kirenn": {
             "enabled":false,
@@ -104,13 +106,14 @@
             "url": "http://twister:7778/api/mcp"
         },
         "UnrealEngine": {
+            "enabled":false,
             "type": "remote",
             "url": "http://localhost:9999/mcp"
         },
         "Rider": {
             "type": "remote",
             "url": "http://127.0.0.1:64342/stream",
-            "enabled": true
+            "enabled": false
         },
         "searxng": {
             "enabled": false,

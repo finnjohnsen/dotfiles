@@ -97,7 +97,11 @@
 		"--directory",
 		"$HOME/src/blender_mcp/mcp",
 		"run",
-		"blender-mcp"
+		"blender-mcp",
+                "--transport",
+                "http",
+                "--port",
+                "9998"
 		]
 	},
         "kirenn": {

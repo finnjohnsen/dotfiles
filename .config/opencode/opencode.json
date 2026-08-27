@@ -59,41 +59,6 @@
                 }
             }
         },
-        "twister-flash-next": {
-            "npm": "@ai-sdk/openai-compatible",
-            "name": "Qwen3.8-Flash-Next (llama.cpp)",
-            "options": {
-                "baseURL": "http://twister:8009/v1"
-            },
-            "models": {
-                "qwen3.8-flash-next": {
-                    "name": "Qwen3.8-Flash-Next UD-Q4_K_XL",
-                    "limit": {
-                        "context": 262144,
-                        "output": 32768
-                    },
-                    "modalities": {
-                        "input": ["text", "image"],
-                        "output": ["text"]
-                    },
-                    "attachment": true,
-                    "variants": {
-                        "thinking": {
-                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "xhigh"}
-                        },
-                        "medium": {
-                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "medium"}
-                        },
-                        "low": {
-                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "low"}
-                        },
-                        "fast": {
-                            "chat_template_kwargs": {"enable_thinking": false}
-                        }
-                    }
-                }
-            }
-        },
         "llamacpp-gemma4": {
             "npm": "@ai-sdk/openai-compatible",
             "name": "Gemma 4 VLM (llama.cpp)",

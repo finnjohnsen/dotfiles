@@ -122,7 +122,7 @@
             "environment": {
                 "BLENDER_MCP_PORT": "9876"
             },
-	    "command": [ "uv", "--directory", "~/src/blender_mcp/mcp", "run", "blender-mcp", "--transport", "stdio"]
+	    "command": [ "uv", "--directory", "{env:HOME}/src/blender_mcp/mcp", "run", "blender-mcp", "--transport", "stdio"]
 	},
         "kirenn": {
             "enabled":false,

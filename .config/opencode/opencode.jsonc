@@ -1,7 +1,13 @@
 {
     "$schema": "https://opencode.ai/config.json",
+    "disabled_providers": ["opencode"],
     "model": "qwen38//models/unsloth/Qwen3.8-27B-GGUF/Qwen3.8-27B-UD-Q6_K.gguf",
     "provider": {
+        // Hide specific OpenCode Zen models instead of the whole provider:
+        // remove "opencode" from disabled_providers, then uncomment.
+        // "opencode": {
+        //     "blacklist": ["glm-4.6", "ling-3.0-flash-free"]
+        // },
         "Twister": {
            "npm": "@ai-sdk/openai-compatible",
             "name": "llamacpp",

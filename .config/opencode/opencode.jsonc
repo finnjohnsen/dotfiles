@@ -70,6 +70,41 @@
                     }
                 }
             }
+        },
+        "strata": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Strata (twister:8018)",
+            "options": {
+                "baseURL": "http://twister:8018/v1"
+            },
+            "models": {
+                "qwen3.8-flash-next-iq3_s": {
+                    "name": "Qwen3.8 Flash Next IQ3_S",
+                    "limit": {
+                        "context": 262144,
+                        "output": 32768
+                    },
+                    "modalities": {
+                        "input": ["text", "image"],
+                        "output": ["text"]
+                    },
+                    "attachment": true,
+                    "variants": {
+                        "high": {
+                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "high"}
+                        },
+                        "medium": {
+                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "medium"}
+                        },
+                        "low": {
+                            "chat_template_kwargs": {"enable_thinking": true, "reasoning_effort": "low"}
+                        },
+                        "fast": {
+                            "chat_template_kwargs": {"enable_thinking": false}
+                        }
+                    }
+                }
+            }
         }
   },
   "tools": {

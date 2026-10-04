@@ -96,7 +96,7 @@
         "UnrealEngine": {
             "enabled":false,
             "type": "remote",
-            "url": "http://localhost:9999/mcp"
+            "url": "http://localhost:9877/mcp"
         },
         "Rider": {
             "type": "remote",

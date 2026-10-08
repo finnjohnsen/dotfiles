@@ -129,14 +129,14 @@
             "url": "http://twister:7778/api/mcp"
         },
         "UnrealEngine": {
-            "enabled":false,
+            "enabled": true,
             "type": "remote",
             "url": "http://localhost:9877/mcp"
         },
         "Rider": {
             "type": "remote",
             "url": "http://127.0.0.1:64482/stream",
-            "enabled": false
+            "enabled": true
         },
         "searxng": {
             "enabled": false,
@@ -174,9 +174,7 @@
       }
     }
   },
-  "plugin": [
-    "./scripts/rider-mcp-plugin.ts"
-  ],
+  "plugin": [],
   "permission": {
     "edit": "ask"
   }

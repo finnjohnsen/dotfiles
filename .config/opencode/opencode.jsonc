@@ -88,11 +88,6 @@
             },
 	    "command": [ "uv", "--directory", "{env:HOME}/src/blender_mcp/mcp", "run", "blender-mcp", "--transport", "stdio"]
 	},
-        "kirenn": {
-            "enabled":false,
-            "type": "remote",
-            "url": "http://twister:7778/api/mcp"
-        },
         "UnrealEngine": {
             "enabled": true,
             "type": "remote",
@@ -102,14 +97,6 @@
             "type": "remote",
             "url": "http://127.0.0.1:64482/stream",
             "enabled": true
-        },
-        "searxng": {
-            "enabled": false,
-            "type": "local",
-            "command": ["npx", "mcp-searxng"],
-            "environment": {
-                "SEARXNG_URL": "http://twister:8501"
-            }
         },
         "z.ai-web-search-prime": {
             "type": "remote",
